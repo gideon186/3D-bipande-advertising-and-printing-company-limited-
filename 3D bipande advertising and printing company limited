@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Bipande Advertising</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="logo.jpg" alt="3D Bipande Advertising Logo">
+        <h1>3D Bipande Advertising & Printing Company</h1>
+        <p>"Reach More People With Us"</p>
+    </header>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Banners</li>
+            <li>Stickers</li>
+            <li>Panaflex</li>
+            <li>One-way</li>
+            <li>Reflective Materials</li>
+            <li>Pull-up Stands</li>
+            <li>Teardrops</li>
+            <li>Flags</li>
+            <li>Billboards</li>
+            <li>Car Branding</li>
+            <li>Pylons and Canopies</li>
+            <li>3D Signages</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Call: <span id="phone">256 200 905206 / 256 751 509395</span></p>
+        <button onclick="copyPhoneNumber()">Copy Phone Number</button>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d9252a;
+    color: white;
+    padding: 20px;
+}
+
+header img {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+section {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #d9252a;
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #d9252a;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #a51e20;
+}
+</html>function copyPhoneNumber() {
+    var phone = document.getElementById("phone").innerText;
+    navigator.clipboard.writeText(phone).then(() => {
+        alert("Phone number copied: " + phone);
+    }).catch(err => {
+        console.error("Error copying text: ", err);
+    });
+}
